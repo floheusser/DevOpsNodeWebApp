@@ -1,4 +1,4 @@
-docker build -t heussflo/node-web-app .
+#docker build -t heussflo/node-web-app .
 
 FROM node:22.15.0
 
