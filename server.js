@@ -1,15 +1,18 @@
 'use strict';
 
 const express = require('express');
+const path = require('path');
 
 // Constants
 const PORT = process.env.PORT || 3000;
 const HOST = '0.0.0.0';
 
 // App
-const app = express();
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Root Route
 app.get('/', (req, res) => {
-  res.send('Hello FS2025 DevOps Course! Now Docker Deployment with GitHub Actions!!!');
+  res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
 app.listen(PORT, HOST);
