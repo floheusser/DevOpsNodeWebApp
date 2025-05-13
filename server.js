@@ -8,6 +8,8 @@ const PORT = process.env.PORT || 3000;
 const HOST = '0.0.0.0';
 
 // App
+const app = express();
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Root Route
